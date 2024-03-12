@@ -42,7 +42,7 @@
 
           @if(Auth::check())
  
-                        <a class="nav-link">
+                        <a href="{{route('nguoidung')}}" class="nav-link">
                             <span class="glyphicon glyphicon-user"></span>
                             {{Auth::user()->name}}
                         </a>
