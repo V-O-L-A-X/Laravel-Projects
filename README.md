@@ -1,7 +1,8 @@
 # Cách xem và sử dụng - View and usage
 ### \*Vietnamese*
 Chọn 1 thư mục để tải về:
-#### Thư mục "bao" (lấy thư mục bên trong cùng nơi lưu trữ với tệp .sql):
+#### Thư mục "bao" 
+(lấy thư mục bên trong cùng nơi lưu trữ với tệp .sql):
   
    + Frontend: Index bắt đầu bằng địa chỉ: /bao/public/<br>
      Các chức năng: Trang chủ, liên hệ, giới thiệu, loại tin, tin tức chi tiết, đăng nhập, đăng ký, đăng xuất, bình luận, tìm kiếm, trang người dùng, cập nhật thông tin người dùng
@@ -16,7 +17,8 @@ Chọn 1 thư mục để tải về:
 
 
 
-#### Thư mục "E-commerce" (lấy thư mục "shop" bên trong cùng nơi lưu trữ với tệp .sql):
+#### Thư mục "E-commerce" 
+(lấy thư mục "shop" bên trong cùng nơi lưu trữ với tệp .sql):
   + Frontend: Index bắt đầu bằng địa chỉ: /shop/public/ <br>
   Các chức năng: Trang chủ, Shop (Shop Now), About Us, Contact Us, Chi tiết sản phẩm, Thêm Yêu thích, Đánh giá, Giỏ hàng (Thêm, Chỉnh sửa, Xoá sản phẩm), Thanh toán (Mã giảm giá: YYYYYY, VNI 5678, YUFG145), Quên mật khẩu, My Account (Đăng nhập, đăng ký, đăng xuất, Cập nhật Account, Danh sách đã đặt hàng, Wishlist, Đổi mật khẩu)
 
