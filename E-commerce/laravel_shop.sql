@@ -386,7 +386,7 @@ CREATE TABLE `discount_coupons` (
   `name` varchar(255) DEFAULT NULL,
   `description` text DEFAULT NULL,
   `max_uses` int(11) DEFAULT NULL,
-  `max_uses_user` int(11) DEFAULT NULL,
+  `max_uses_` int(11) DEFAULT NULL,
   `type` enum('percent','fixed') NOT NULL DEFAULT 'fixed',
   `discount_amount` double(10,2) NOT NULL,
   `min_amount` double(10,2) DEFAULT NULL,
@@ -401,7 +401,7 @@ CREATE TABLE `discount_coupons` (
 -- Dumping data for table `discount_coupons`
 --
 
-INSERT INTO `discount_coupons` (`id`, `code`, `name`, `description`, `max_uses`, `max_uses_user`, `type`, `discount_amount`, `min_amount`, `status`, `start_at`, `expires_at`, `created_at`, `updated_at`) VALUES
+INSERT INTO `discount_coupons` (`id`, `code`, `name`, `description`, `max_uses`, `max_uses_`, `type`, `discount_amount`, `min_amount`, `status`, `start_at`, `expires_at`, `created_at`, `updated_at`) VALUES
 (3, 'YYYYYY', 'On the Top', '<p>qwsdfg</p>', 10, 10, 'fixed', 200000.00, 100000.00, 1, '2023-11-30 11:25:06', '2023-12-29 11:17:13', '2023-11-29 04:25:14', '2023-12-01 06:38:22'),
 (4, 'VNI 5678', 'hehe', '<p>qwadfggwgfwqawfgwqawdfg</p>', 5, 1, 'percent', 20.00, NULL, 1, '2023-12-13 07:33:36', '2024-01-04 07:33:40', '2023-11-30 00:33:47', '2023-11-30 00:33:47'),
 (5, 'YUFG145', 'hoihoi', '<p>qswdafgadozijkn,maszixkn,m</p>', 12, 5, 'percent', 50.00, NULL, 1, '2023-12-13 08:34:49', '2023-12-29 08:34:54', '2023-12-01 01:35:00', '2023-12-01 01:35:00');
@@ -439,11 +439,11 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
+(1, '2014_10_12_000000_create_s_table', 1),
 (2, '2014_10_12_100000_create_password_reset_tokens_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(5, '2023_10_17_114708_alter_users', 2),
+(5, '2023_10_17_114708_alter_s', 2),
 (6, '2023_10_19_084222_create_categories_table', 3),
 (7, '2023_10_21_085835_create_temp_images_table', 4),
 (8, '2023_10_22_112522_create_sub_categories_table', 5),
@@ -454,7 +454,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (13, '2023_11_20_091958_alter_products_table', 9),
 (14, '2023_11_20_093032_alter_sub_categories_table', 10),
 (15, '2023_11_22_084230_alter_products_table', 11),
-(16, '2023_11_25_080301_alter_users_table', 12),
+(16, '2023_11_25_080301_alter_s_table', 12),
 (17, '2023_11_26_072911_create_countries_table', 13),
 (18, '2023_11_26_080001_create_orders_table', 14),
 (19, '2023_11_26_080138_create_order_items_table', 14),
@@ -464,7 +464,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (23, '2023_12_02_085655_alter_orders_table', 17),
 (24, '2023_12_04_082611_alter_orders_table', 18),
 (25, '2023_12_06_093415_create_wishlists_table', 19),
-(26, '2023_12_10_075653_alter_users_table', 20),
+(26, '2023_12_10_075653_alter_s_table', 20),
 (27, '2023_12_11_084655_create_pages_table', 21),
 (28, '2023_12_19_081255_create_product_ratings_table', 22);
 
@@ -476,7 +476,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 
 CREATE TABLE `orders` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `_id` bigint(20) UNSIGNED NOT NULL,
   `subtotal` double(10,2) NOT NULL,
   `shipping` double(10,2) NOT NULL,
   `coupon_code` varchar(255) DEFAULT NULL,
@@ -505,7 +505,7 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`id`, `user_id`, `subtotal`, `shipping`, `coupon_code`, `coupon_code_id`, `discount`, `grand_total`, `payment_status`, `status`, `shipped_date`, `first_name`, `last_name`, `email`, `mobile`, `country_id`, `address`, `apartment`, `city`, `state`, `zip`, `notes`, `created_at`, `updated_at`) VALUES
+INSERT INTO `orders` (`id`, `_id`, `subtotal`, `shipping`, `coupon_code`, `coupon_code_id`, `discount`, `grand_total`, `payment_status`, `status`, `shipped_date`, `first_name`, `last_name`, `email`, `mobile`, `country_id`, `address`, `apartment`, `city`, `state`, `zip`, `notes`, `created_at`, `updated_at`) VALUES
 (2, 3, 2466478.00, 0.00, NULL, NULL, NULL, 2466478.00, 'not paid', 'shipped', '2023-12-07 09:20:33', 'Dank Memes', 'Nhộn', 'hoahong@d.com', '0394763795', 7, 'wesfga', NULL, 'wsdf', 'gftd', 'we35656', NULL, '2023-11-26 07:02:20', '2023-12-04 02:20:37'),
 (3, 3, 875846.00, 0.00, NULL, NULL, NULL, 875846.00, 'not paid', 'cancelled', '2023-04-05 09:39:15', 'Dank Memes', 'Nhộn', 'hoahong@d.com', '0394763795', 7, 'wesfga', '12344444444444', 'wsdf', 'gftd', 'we35656', 'wsadfgfasdfv', '2023-11-26 07:02:58', '2023-12-04 02:39:19'),
 (4, 3, 780000.00, 0.00, NULL, NULL, NULL, 780000.00, 'not paid', 'delivered', NULL, 'Dank Memes', 'Nhộn', 'hoahong@d.com', '0394763795', 7, 'wesfga', '12344444444444', 'wsdf', 'gftd', 'we35656', NULL, '2023-11-26 07:08:40', '2023-11-26 07:08:40'),
@@ -980,7 +980,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `role`, `status`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Admin', 'admin@example.com', NULL, 2, 1, NULL, '$2y$10$aK6NpJRoM4oIM9wSd7ZmS.DisnMkjrIKB5md2nQ9MImrt5dism5sq', NULL, '2023-10-17 05:13:51', '2023-10-17 05:13:51'),
-(2, 'Vesna', 'vesna@hi.com', NULL, 1, 1, NULL, '$2y$10$9KsCWWS3VSo7Vgdv4c/vo.CPUm9O6KzK8tStiPdORnFtk062iuVAu', NULL, '2023-10-17 05:16:26', '2023-10-17 05:16:26'),
+(2, 'Vesna', 'vesna@hi.com', NULL, 2, 1, NULL, '$2y$10$9KsCWWS3VSo7Vgdv4c/vo.CPUm9O6KzK8tStiPdORnFtk062iuVAu', NULL, '2023-10-17 05:16:26', '2023-10-17 05:16:26'),
 (3, 'Dank Memes Vui Nhộn', 'hoahong@d.com', '0394763795', 1, 1, NULL, '$2y$10$g2XzZRBTbSzKy40nlYPJIeTfmliV0U108tsWSo5BTjQAW2T.51fAG', NULL, '2023-11-25 01:21:38', '2023-12-12 02:01:13'),
 (4, 'YOOOOOOOOOO', 'xuan.tranvu52@gmail.com', '0547844234', 1, 1, NULL, '$2y$10$TBpM2mpzS.3Dz2jMTiEhd.ZB.VOc1MbJzMgOw8OF10RXXQJVj9oSW', NULL, '2023-11-25 04:38:56', '2023-12-09 01:39:23'),
 (5, 'sdjknm,x ijskndm,', 'hohoho@gmail.com', '096456899', 1, 1, NULL, '$2y$10$HIT.ROTnG0XMGT0plohZleTlZerl4wZLzuMDd80Ayz07F5HTbpr6e', NULL, '2023-11-28 03:01:34', '2023-12-16 02:46:57');
