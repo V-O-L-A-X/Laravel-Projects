@@ -22,7 +22,7 @@ Chọn 1 thư mục để tải về:
   + Frontend: Index bắt đầu bằng địa chỉ: /shop/public/ <br>
   Các chức năng: Trang chủ, Shop (Shop Now), About Us, Contact Us, Chi tiết sản phẩm, Thêm Yêu thích, Đánh giá, Giỏ hàng (Thêm, Chỉnh sửa, Xoá sản phẩm), Thanh toán (Mã giảm giá: YYYYYY, VNI 5678, YUFG145), Quên mật khẩu, My Account (Đăng nhập, đăng ký, đăng xuất, Cập nhật Account, Danh sách đã đặt hàng, Wishlist, Đổi mật khẩu)
 
-  ![](https://github.com/V-O-L-A-X/Laravel-Projects/blob/main/github3.png)
+  [Xem mẫu ở đây](https://laravel-e-commerce.free.nf)
 
     
   + Backend: Admin Panel bắt đầu bằng địa chỉ: /shop/public/admin/dashboard/ <br>
@@ -30,7 +30,7 @@ Chọn 1 thư mục để tải về:
   Các chức năng: Dashboard; Hệ thống CRUD (Categorys, SubCategorys, Brands, Products, Shippings, Discounts, Users, Pages); Danh sách (Orders, Ratings), Đăng nhập, Đăng xuất.
 
     
-  ![](https://github.com/V-O-L-A-X/Laravel-Projects/blob/main/github4.png)
+  [Xem mẫu ở đây](https://laravel-e-commerce.free.nf/admin/dashboard)
 
 
 
@@ -53,15 +53,17 @@ Choose 1 folder to download:
 <details>
 <summary>- Folder "E-commerce" (use the folder "shop" that's at same place with file .sql):</summary>
   
-+ Frontend: Index starts at: /shop/public/  
++ Frontend: Index starts at: /shop/public/<br>
+Function: Index, Shop (Shop Now), About Us, Contact Us, Product's Detail, Add to wishlist, Rating, Cart (Add, Edit, Remove Product), Checkout (Coupon: YYYYYY, VNI 5678, YUFG145), Forgot Your password, My Account (Login, Registration, Logout, Update Account, Orders List, Wishlist, Change Password)
 
-  ![](https://github.com/V-O-L-A-X/Laravel-Projects/blob/main/github3.png)
+[Preview here](https://laravel-e-commerce.free.nf)
 
     
 + Backend: Admin Panel starts at: /shop/public/admin/dashboard/ <br>
-  Username: `vesna@hi.com` Password: 123456
+  Username: `vesna@hi.com` Password: 123456<br>
+  Function: Dashboard; The CRUD (Categorys, SubCategorys, Brands, Products, Shippings, Discounts, Users, Pages); List (Orders, Ratings), Login, Logout.
 
-  ![](https://github.com/V-O-L-A-X/Laravel-Projects/blob/main/github4.png)
+[Preview here](https://laravel-e-commerce.free.nf/admin/dashboard)
 </details>
 
 
